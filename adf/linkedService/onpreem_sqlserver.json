@@ -1,0 +1,23 @@
+{
+	"name": "onpreem_sqlserver",
+	"properties": {
+		"description": "SQL Server connection",
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Data Source=MAIN_PC;Initial Catalog=AdventureWorksLT2017;User ID=adcon",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AKV_SQLServer",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "password"
+			}
+		},
+		"connectVia": {
+			"referenceName": "SHIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
