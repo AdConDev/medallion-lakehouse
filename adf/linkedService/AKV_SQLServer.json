@@ -1,0 +1,11 @@
+{
+	"name": "AKV_SQLServer",
+	"properties": {
+		"description": "Username and password",
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://kv-med-lakehouse-001.vault.azure.net/"
+		}
+	}
+}
