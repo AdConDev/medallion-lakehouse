@@ -1,0 +1,7 @@
+{
+	"name": "copy_pipeline",
+	"properties": {
+		"description": "Copies data from on-premise",
+		"annotations": []
+	}
+}
