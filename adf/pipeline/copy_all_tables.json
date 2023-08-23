@@ -42,7 +42,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Copy All Tables').output.values",
+						"value": "@activity('all_tables_lookup').output.value",
 						"type": "Expression"
 					},
 					"isSequential": false,
@@ -63,7 +63,7 @@
 								"source": {
 									"type": "SqlServerSource",
 									"sqlReaderQuery": {
-										"value": "@{concat('SELECT * FROM', item().SchemaName, '.', item().TableName)}",
+										"value": "@{concat('SELECT * FROM', item().schema_name, '.', item().table_name)}",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
@@ -100,11 +100,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"schema_name": {
-											"value": "@item().SchemaName",
+											"value": "@item().schema_name",
 											"type": "Expression"
 										},
 										"table_name": {
-											"value": "@item().TableName",
+											"value": "@item().table_name",
 											"type": "Expression"
 										}
 									}
